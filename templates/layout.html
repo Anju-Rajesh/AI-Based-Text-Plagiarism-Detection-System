@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TextGuard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <header>
+        <h1>TextGuard</h1>
+        <nav>
+            <ul>
+                {% if current_user.is_authenticated %}
+                <li><a href="{{ url_for('ai_detection') }}">AI Detection</a></li>
+                <li><a href="{{ url_for('plagiarism') }}">Plagiarism</a></li>
+                <li><a href="{{ url_for('similarity') }}">Similarity</a></li>
+                <li><a href="#">Logout</a></li>
+                {% else %}
+                <li><a href="{{ url_for('login') }}">Login</a></li>
+                <li><a href="{{ url_for('register') }}">Register</a></li>
+                {% endif %}
+            </ul>
+        </nav>
+    </header>
+    <main>
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <ul class="flashes">
+            {% for message in messages %}
+            <li>{{ message }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+        {% endwith %}
+        {% block content %}{% endblock %}
+    </main>
+    <footer>
+        <p>&copy; 2023 TextGuard</p>
+    </footer>
+</body>
+
+</html>
