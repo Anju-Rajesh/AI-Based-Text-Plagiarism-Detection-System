@@ -1,8 +1,15 @@
-class SimilarityChecker:
-    def __init__(self):
-        pass
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.metrics.pairwise import cosine_similarity
 
-    def check_similarity(self, text1, text2):
-        # Placeholder logic
-        # In reality, use cosine similarity, Jaccard index, or SequenceMatcher
-        return 0.5  # Fixed 50% similarity for demo
+def calculate_similarity(text1, text2):
+    if not text1.strip() or not text2.strip():
+        return 0.0
+    
+    vectorizer = TfidfVectorizer()
+    try:
+        tfidf = vectorizer.fit_transform([text1, text2])
+        sim = cosine_similarity(tfidf[0:1], tfidf[1:2])
+        return round(float(sim[0][0]) * 100, 2)
+    except Exception as e:
+        print(f"Error in similarity calculation: {e}")
+        return 0.0

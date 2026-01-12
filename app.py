@@ -130,6 +130,7 @@ def similarity():
             
     return render_template('similarity.html', result=result)
 
+
 @app.route('/plagiarism')
 @login_required
 def plagiarism():
@@ -138,3 +139,5 @@ def plagiarism():
 
 if __name__ == '__main__':
     app.run(debug=True)
+
+

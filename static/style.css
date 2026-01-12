@@ -1,3 +1,4 @@
+
 :root {
     --primary-color: #4361ee;
     --secondary-color: #3f37c9;
@@ -152,6 +153,9 @@ textarea {
 .alert-success { background-color: #d1e7dd; color: #0f5132; }
 .alert-info { background-color: #cff4fc; color: #055160; }
 .alert-warning { background-color: #fff3cd; color: #664d03; }
+
+
+
 
 
 
