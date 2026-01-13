@@ -13,3 +13,11 @@ def calculate_similarity(text1, text2):
     except Exception as e:
         print(f"Error in similarity calculation: {e}")
         return 0.0
+
+
+
+
+
+
+
+
