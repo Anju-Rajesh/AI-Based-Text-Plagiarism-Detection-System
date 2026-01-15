@@ -3,6 +3,7 @@ from nltk.tokenize import sent_tokenize, word_tokenize
 from collections import Counter
 import math
 
+
 # Download necessary NLTK data
 try:
     nltk.data.find('tokenizers/punkt')
@@ -72,3 +73,7 @@ def analyze_text_ai(text):
     conclusion = "Likely AI-generated" if ai_score > 50 else "Likely Human-written"
     
     return round(ai_score, 2), conclusion
+
+
+
+
