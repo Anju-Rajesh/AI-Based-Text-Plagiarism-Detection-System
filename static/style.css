@@ -1,12 +1,14 @@
 :root {
-    --primary-color: #4361ee;
-    --secondary-color: #3f37c9;
-    --bg-color: #f8f9fa;
-    --card-bg: #ffffff;
-    --text-color: #212529;
-    --muted-text: #6c757d;
+    --primary-color: #4cc9f0;
+    --secondary-color: #4895ef;
+    --bg-color: #0f172a;
+    --card-bg: #1e293b;
+    --text-color: #f8f9fa;
+    --muted-text: #94a3b8;
     --border-radius: 12px;
-    --box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    --box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+    --input-bg: #334155;
+    --input-border: #475569;
 }
 
 
@@ -34,6 +36,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-bottom: 1px solid var(--input-border);
 }
 
 .navbar-brand {
@@ -68,6 +71,7 @@ body {
     box-shadow: var(--box-shadow);
     padding: 2.5rem;
     margin-bottom: 2rem;
+    border: 1px solid var(--input-border);
 }
 
 .form-group {
@@ -78,6 +82,7 @@ label {
     display: block;
     margin-bottom: 0.5rem;
     font-weight: 600;
+    color: var(--text-color);
 }
 
 input[type="text"],
@@ -86,9 +91,19 @@ input[type="password"],
 textarea {
     width: 100%;
     padding: 0.8rem;
-    border: 1px solid #dee2e6;
+    border: 1px solid var(--input-border);
     border-radius: 8px;
     box-sizing: border-box;
+    background-color: var(--input-bg);
+    color: var(--text-color);
+    font-family: inherit;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(76, 201, 240, 0.2);
 }
 
 textarea {
@@ -110,12 +125,14 @@ textarea {
 
 .btn-primary {
     background-color: var(--primary-color);
-    color: white;
+    color: #0f172a;
+    /* Dark text on bright button for contrast */
 }
 
 .btn-primary:hover {
     background-color: var(--secondary-color);
     transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(76, 201, 240, 0.3);
 }
 
 /* Results Section */
@@ -124,6 +141,7 @@ textarea {
     padding: 1.5rem;
     border-radius: var(--border-radius);
     text-align: center;
+    background-color: rgba(255, 255, 255, 0.05);
 }
 
 .percentage-circle {
@@ -140,8 +158,17 @@ textarea {
     font-size: 0.9rem;
 }
 
-.badge-ai { background-color: #ffdce0; color: #dc3545; }
-.badge-human { background-color: #d1e7dd; color: #198754; }
+.badge-ai {
+    background-color: rgba(220, 53, 69, 0.2);
+    color: #ff6b6b;
+    border: 1px solid rgba(220, 53, 69, 0.3);
+}
+
+.badge-human {
+    background-color: rgba(25, 135, 84, 0.2);
+    color: #51cf66;
+    border: 1px solid rgba(25, 135, 84, 0.3);
+}
 
 /* Alerts */
 .alert {
@@ -150,24 +177,26 @@ textarea {
     margin-bottom: 1rem;
 }
 
-.alert-danger { background-color: #f8d7da; color: #842029; }
-.alert-success { background-color: #d1e7dd; color: #0f5132; }
-.alert-info { background-color: #cff4fc; color: #055160; }
-.alert-warning { background-color: #fff3cd; color: #664d03; }
+.alert-danger {
+    background-color: rgba(220, 53, 69, 0.2);
+    color: #ff6b6b;
+    border: 1px solid rgba(220, 53, 69, 0.3);
+}
 
+.alert-success {
+    background-color: rgba(25, 135, 84, 0.2);
+    color: #51cf66;
+    border: 1px solid rgba(25, 135, 84, 0.3);
+}
 
+.alert-info {
+    background-color: rgba(13, 202, 240, 0.2);
+    color: #3dd5f3;
+    border: 1px solid rgba(13, 202, 240, 0.3);
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.alert-warning {
+    background-color: rgba(255, 193, 7, 0.2);
+    color: #ffca2c;
+    border: 1px solid rgba(255, 193, 7, 0.3);
+}
