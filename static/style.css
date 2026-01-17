@@ -159,9 +159,9 @@ textarea {
 }
 
 .badge-ai {
-    background-color: rgba(220, 53, 69, 0.2);
-    color: #ff6b6b;
-    border: 1px solid rgba(220, 53, 69, 0.3);
+    background-color: rgba(148, 163, 184, 0.1);
+    color: var(--muted-text);
+    border: 1px solid rgba(148, 163, 184, 0.2);
 }
 
 .badge-human {
@@ -178,9 +178,9 @@ textarea {
 }
 
 .alert-danger {
-    background-color: rgba(220, 53, 69, 0.2);
-    color: #ff6b6b;
-    border: 1px solid rgba(220, 53, 69, 0.3);
+    background-color: rgba(148, 163, 184, 0.1);
+    color: var(--muted-text);
+    border: 1px solid rgba(148, 163, 184, 0.2);
 }
 
 .alert-success {

@@ -2,8 +2,8 @@
 {% block content %}
 <div class="card">
     <h2>Text Similarity Detection</h2>
-    <p style="color: var(--muted-text); margin-bottom: 2rem;">Compare two pieces of text to find similarities using
-        TF-IDF and Cosine Similarity.</p>
+    <p style="color: var(--muted-text); margin-bottom: 2rem;">Compare two pieces of text to find similarities </p>
+    <!--using TF-IDF and Cosine Similarity.-->
 
     <form method="POST">
         <div class="form-group">
@@ -33,7 +33,7 @@
             Moderate similarity detected.
             {% else %}
             Low similarity. The texts are mostly unique.
-            
+
             {% endif %}
         </p>
     </div>
